@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="lib/mina-core-2.0.0-RC1.jar"/>
+	<classpathentry kind="lib" path="F:/develop/server/playframework/play-1.1RC4/play-1.1/framework/lib/commons-beanutils-1.8.3.jar"/>
+	<classpathentry kind="lib" path="F:/develop/server/playframework/play-1.1RC4/play-1.1/framework/lib/commons-codec-1.4.jar"/>
+	<classpathentry kind="lib" path="F:/develop/server/playframework/play-1.1RC4/play-1.1/framework/lib/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="F:/develop/server/playframework/play-1.1RC4/play-1.1/framework/lib/commons-email-1.2.jar"/>
+	<classpathentry kind="lib" path="F:/develop/server/playframework/play-1.1RC4/play-1.1/framework/lib/commons-fileupload-1.2.jar"/>
+	<classpathentry kind="lib" path="F:/develop/server/playframework/play-1.1RC4/play-1.1/framework/lib/commons-io-1.4.jar"/>
+	<classpathentry kind="lib" path="F:/develop/server/playframework/play-1.1RC4/play-1.1/framework/lib/commons-lang-2.5.jar"/>
+	<classpathentry kind="lib" path="F:/develop/server/playframework/play-1.1RC4/play-1.1/framework/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="F:/develop/server/playframework/play-1.1RC4/play-1.1/framework/lib/ehcache-core-2.0.0.jar"/>
+	<classpathentry kind="lib" path="F:/develop/server/playframework/play-1.1RC4/play-1.1/framework/play.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

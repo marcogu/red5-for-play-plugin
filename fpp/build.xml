@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="module-demo" default="build" basedir=".">
+	<property name="src" value="src"/>
+	<property name="dest" value="classes"/>
+	<property name="deploy" value="lib"/>
+	<property name="play.path" value="F:/develop/server/playframework/play-1.1RC4/play-1.1"/>
+	<property name="demo_jar" value="module-demo.jar"/>
+	
+	<path id="project.classpath">
+		<pathelement path="${play.path}/framework/classes" />
+		<fileset dir="${play.path}/framework/lib">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="${play.path}/framework">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="lib">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+			
+	<target name="clear">
+		<delete dir="${dest}"/>
+		<delete>
+			<fileset dir="${deploy}">
+				<include name="${demo_jar}"/>
+			</fileset>
+		</delete>
+	</target>
+	<target name="init" depends="clear">
+		<mkdir dir="${dest}"/>
+		<mkdir dir="${deploy}"/>
+	</target>	
+	<target name="compile" depends="init">
+		<copy todir="${dest}">
+			<fileset dir="${src}">
+				<include name="**/play.plugins" />
+			</fileset>
+		</copy>
+		
+	    <javac includeAntRuntime="false" classpath="" srcdir="${src}" destdir="${dest}"
+	    		debug="on">
+	    	<classpath refid="project.classpath" />
+	    </javac>
+	</target>
+	<target name="build" depends="compile">
+		<jar destfile="${deploy}/${demo_jar}" basedir="${dest}" />
+	</target>
+
+	<target name="run" depends="build">
+		<java classpath="${deploy}/${demo_jar}" classname="com.pxl.demo.DemoCommends" description="DemoCommends">
+			<arg value="regen"/>
+		</java>
+	</target>
+</project>
